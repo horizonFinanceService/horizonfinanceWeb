@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizon Finance Service</title>
+    <!-- Import Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Import Google Fonts for fancy text -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles */
+        header {
+            background-color: #121212; /* Dark background */
+            padding: 10px 0;
+        }
+        .brand-logo {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            font-size: 32px;
+            color: #fff;
+            margin-left: 20px;
+        }
+        /* Dark theme for navbar */
+        nav {
+            background-color: #121212;
+        }
+        nav ul a {
+            color: #fff;
+        }
+        /* Main content style */
+        #main-content {
+            margin-top: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <nav>
+        <div class="nav-wrapper">
+            <!-- Horizon logo (text) -->
+            <a href="#" class="brand-logo">Horizon Finance</a>
+            <!-- Add 5 items in the navbar -->
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="#" onclick="showHome()">Home</a></li>
+                <li><a href="#" onclick="showMessage('About Us')">About Us</a></li>
+                <li><a href="#" onclick="showMessage('Services')">Services</a></li>
+                <li><a href="#" onclick="showContact()">Contact</a></li>
+                <li><a href="#" onclick="showMessage('FAQ')">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<!-- Main Content -->
+<main id="main-content">
+    <div class="container">
+        <h2>Welcome to Horizon Finance Service</h2>
+        <p>
+            At Horizon Finance Service, we are dedicated to providing top-notch financial solutions tailored to meet your needs. Whether you're an individual looking for personal financial advice or a business seeking strategic financial planning, we've got you covered.
+        </p>
+        <p>
+            Our team of experienced professionals is committed to helping you navigate through the complexities of finance with ease. From investment management to retirement planning, we offer a comprehensive range of services to ensure your financial well-being.
+        </p>
+        <p>
+            Contact us today to schedule a consultation and take the first step towards securing your financial future with confidence.
+        </p>
+    </div>
+</main>
+
+<!-- Import Materialize JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<!-- Custom JavaScript -->
+<script>
+    function showMessage(section) {
+        document.getElementById('main-content').innerHTML = '<div class="container"><h2>' + section + '</h2><p>Content for ' + section + ' section coming soon...</p></div>';
+    }
+    
+    function showHome() {
+        // Restore original content for Home
+        document.getElementById('main-content').innerHTML = '<div class="container"><h2>Welcome to Horizon Finance Service</h2><p>At Horizon Finance Service, we are dedicated to providing top-notch financial solutions tailored to meet your needs. Whether you\'re an individual looking for personal financial advice or a business seeking strategic financial planning, we\'ve got you covered.</p><p>Our team of experienced professionals is committed to helping you navigate through the complexities of finance with ease. From investment management to retirement planning, we offer a comprehensive range of services to ensure your financial well-being.</p><p>Contact us today to schedule a consultation and take the first step towards securing your financial future with confidence.</p></div>';
+    }
+    
+    function showContact() {
+        // Display email address only
+        document.getElementById('main-content').innerHTML = '<div class="container"><h2>Contact</h2><p>Email: horizonfinanceservice@gmail.com</p></div>';
+    }
+</script>
+
+</body>
+</html>
